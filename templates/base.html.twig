@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+      
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+
+    <header>
+        {% block nav %}
+        <nav>
+            <a href="/">
+                <img class="logo" src="imgs/logo.png" alt="logo">
+            </a>
+
+            <button class="nav-toggle" onClick="burgerMenu()">
+                <!-- on-click starts this "burgerMenu()" function -->
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="tabs" id="burgerMenuDropdown">
+                <a class="active" href="./aboutme.html"></i>About me</a>
+                <a href="./booking.html">Book a class</a>
+                <a class="active" href="#"></i>Pricing</a>
+                <a href="#contact">Contact</a>
+
+                <div class="btnenrol">
+                    <a href="./booking.html"><button><span>Enrol now</span>
+                        </button></a>
+                </div>
+
+                <div class='iconsSM'>
+                    <a href="https://github.com/EstelleEG">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/estellegregoirel/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://gitlab.com/gitlab-org/gitlab">
+                        <i class="fab fa-gitlab"></i>
+                    </a>
+                </div>
+
+                <div class='iconsLog'>
+                    <a href="">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    {% endblock %}
+   </header>
+
+    <body>
+           {% block title %}
+
+           {% endblock %}
+
+           {% block body %}
+
+           {% endblock %}
+       
+    </body>
+
+  {% block footer %}
+        <footer>
+        <!-- Scroll Top arrow  
+        <button style="color:white" onclick="topFunction()" id="myBtn" title="Go to top"><i
+                class="fas fa-arrow-up"></i></button> -->
+
+        <!-- FOOTER -->
+        <a href="/">
+            <img class="logofooter" src="imgs/logo.png" alt="logo">
+        </a>
+
+        <div>
+            <p>© 2022 All rights reserved. Legal Notice. Created by Estelle. Namaste🙏 </p>
+        </div>
+
+        <div class="iconsSMfooter">
+            <a href="https://github.com/EstelleEG">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/estellegregoirel/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://gitlab.com/gitlab-org/gitlab">
+                <i class="fab fa-gitlab"></i>
+            </a>
+        </div>
+    </footer>
+  {% endblock%}
+  
+</html>
